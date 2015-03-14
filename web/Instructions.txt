@@ -1,0 +1,43 @@
+
+http://expressjs.com/
+
+http://expressjs.com/4x/api.html
+
+
+1. Sync your folder with GitHub
+
+2. At a command prompte in the \GitHub\LivingScienceCS\SampleWebServer\
+
+3. npm install express
+
+
+
+
+
+
+Navigate to: http://127.0.0.1:8080/user/1234
+
+You should see "Get User: 1234"
+
+http://127.0.0.1:8080/images/image1.jpg
+	will show you a picture
+
+http://127.0.0.1:8080/images/index.html
+    will show you an HTML page
+
+
+http://127.0.0.1:8080/testdir/
+	Will show you an image unless you put a file name on it.
+
+
+http://127.0.0.1:8080/lines/123/role/ShowMeSomething
+
+Homework: 
+1) Modify the web server to respond to the following request:
+    http://127.0.0.1:8080/homework/
+	*This should serve a page index.html that you create in your "homework" folder
+
+2)it should respond to the following request 
+   http://127.0.0.1:8080/homework/<fileName> by serving the file name 
+
+3) (!!Important!!!) Check your work into a NEW brance called "<yourname> WS Test"

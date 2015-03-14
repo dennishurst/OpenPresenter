@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="/js/jquery-2.1.3.min.js"></script>
+</head>
+<body>
+    <h1>Hi, how are you</h1>
+    <p><a onclick="fxNext(); return false;">Next</a></p>
+    <p>
+        <div id="idShowLines"></div>
+    </p>
+    
+
+<script type="text/javascript">
+
+    function fxNext() {
+
+        if (iLine < oScene.lines.length - 1) {
+            iLine++;
+        }
+
+
+        var sLine = iLine.toString() + ":" + oScene.lines[iLine].line;
+        $("#idShowLines").html(sLine);
+    }
+
+    var iLine = -1;
+
+    var oScene = {
+        "_id": "1",
+        "dataType": "Scene",
+        "description": "Act 2, Scene 2: Capulet's orchard.",
+        "sceneOrder": 2,
+        "act": 1,
+        "lines": [
+          {
+              "role": "",
+              "stageDirection": "Enter ROMEO",
+              "line": ""
+          },
+          {
+              "role": "ROMEO",
+              "stageDirection": "",
+              "line": "He jests at scars that never felt a wound."
+          },
+          {
+              "role": "ROMEO",
+              "stageDirection": "JULIET appears above at a window",
+              "line": ""
+          },
+          {
+              "role": "ROMEO",
+              "stageDirection": "",
+              "line": "But, soft! what light through yonder window breaks?<br />It is the east, and Juliet is the sun.<br />Arise, fair sun, and kill the envious moon,<br />Who is already sick and pale with grief,<br />That thou her maid art far more fair than she:<br />Be not her maid, since she is envious;<br />Her vestal livery is but sick and green<br />And none but fools do wear it; cast it off.<br />It is my lady, O, it is my love!<br />O, that she knew she were!<br />She speaks yet she says nothing: what of that?<br />Her eye discourses; I will answer it.<br />I am too bold, 'tis not to me she speaks:<br />Two of the fairest stars in all the heaven,<br />Having some business, do entreat her eyes<br />To twinkle in their spheres till they return.<br />What if her eyes were there, they in her head?<br />The brightness of her cheek would shame those stars,<br />As daylight doth a lamp; her eyes in heaven<br />Would through the airy region stream so bright<br />That birds would sing and think it were not night.<br />See, how she leans her cheek upon her hand!<br />O, that I were a glove upon that hand,<br />That I might touch that cheek!"
+          },
+          {
+              "role": "JULIET",
+              "stageDirection": "",
+              "line": "Ay me!"
+          },
+          {
+              "role": "ROMEO",
+              "stageDirection": "",
+              "line": "She speaks:<br />O, speak again, bright angel! for thou art<br />As glorious to this night, being o'er my head<br />As is a winged messenger of heaven<br />Unto the white-upturned wondering eyes<br />Of mortals that fall back to gaze on him<br />When he bestrides the lazy-pacing clouds<br />And sails upon the bosom of the air."
+          },
+          {
+              "role": "JULIET",
+              "stageDirection": "",
+              "line": "O Romeo, Romeo! wherefore art thou Romeo?<br />Deny thy father and refuse thy name;<br />Or, if thou wilt not, be but worn my love,<br />And I'll no longer be a Capulet."
+          },
+          {
+              "role": "ROMEO",
+              "stageDirection": "[Aside]",
+              "line": "Shall I hear more, or shall I speak at this?"
+          }
+        ]
+    }
+
+
+    alert(oScene.description);
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
