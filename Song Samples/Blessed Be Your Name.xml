@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<song xmlns="http://openlyrics.info/namespace/2009/song" version="0.8" createdIn="OpenLP 2.0.3" modifiedIn="OpenLP 2.0.3" modifiedDate="2013-09-19T23:23:40">
+  <properties>
+    <titles>
+      <title>Blessed Be Your Name</title>
+    </titles>
+    <authors>
+      <author>Matt Redman</author>
+    </authors>
+  </properties>
+  <lyrics>
+    <verse name="v1">
+      <lines>Blessed Be Your Name<br/>In the land that is plentiful<br/>Where Your streams of abundance flow<br/>Blessed be Your name</lines>
+    </verse>
+    <verse name="v2">
+      <lines>Blessed Be Your name<br/>When I'm found in the desert place<br/>Though I walk through the wilderness<br/>Blessed Be Your name</lines>
+    </verse>
+    <verse name="c1">
+      <lines>Every blessing You pour out<br/>I'll turn back to praise<br/>When the darkness closes in, Lord<br/>Still I will say</lines>
+    </verse>
+    <verse name="v3">
+      <lines>Blessed be the name of the Lord<br/>Blessed be Your name<br/>Blessed be the name of the Lord<br/>Blessed be Your glorious name</lines>
+    </verse>
+    <verse name="v4">
+      <lines>Blessed be Your name<br/>When the sun's shining down on me<br/>When the world's 'all as it should be'<br/>Blessed be Your name</lines>
+    </verse>
+    <verse name="v5">
+      <lines>Blessed be Your name<br/>On the road marked with suffering<br/>Though there's pain in the offering<br/>Blessed be Your name</lines>
+    </verse>
+    <verse name="c2">
+      <lines>Blessed be the name of the Lord<br/>Blessed be Your name<br/>Blessed be the name of the Lord<br/>Blessed be Your glorious name</lines>
+    </verse>
+    <verse name="v6">
+      <lines>Blessed be the name of the Lord<br/>Blessed be Your name<br/>Blessed be the name of the Lord<br/>Blessed be Your glorious name</lines>
+    </verse>
+    <verse name="v7">
+      <lines>You give and take away<br/>You give and take away<br/>My heart will choose to say<br/>Lord, blessed be Your name</lines>
+    </verse>
+  </lyrics>
+</song>
