@@ -1,39 +1,8 @@
-var express = require('express'); 
-var url = require('url'); 
-var app = express(); 
+var app = require('express')();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
 
-//var http = require('http').Server(app);
-//var io = require('socket.io')(http);
-
-
-//io.on('connection', function (socket) {
-//    console.log('a user connected');
-//});
-
-app.listen(8080);
-
-
-
-
-
-//var app = require('express')();
-
-
-
-app.get('/testdir/*', function (req, res) {
-    console.log('howdy');
-    res.sendFile('image1.jpg',  
-        {maxAge: 1,    // 24* 60* 60* 1000, 
-        root: './images/'},
-        function(err){
-            if (err){ 
-                console.log(" Error"); 
-            }
-            else {
-                console.log(" Success"); 
-            } 
-    }); 
-});
+var url = require('url');
 
 
 app.get('/user/:userid', function (req, res) {
@@ -56,25 +25,6 @@ app.get('/user/:userid', function (req, res) {
     res.send(sT);
 });
 
-app.get('/imagesnotused/*', function (req, res) {
-    var sFile = req.originalUrl;
-    sFile = sFile.substring(8, sFile.length);
-
-    res.sendFile(sFile,
-        {
-            maxAge: 1,    // 24* 60* 60* 1000, 
-            root: './images/'
-        },
-        function (err) {
-            if (err) {
-                console.log(" Error");
-                res.status(err.status).end();
-            }
-            else {
-                console.log(" Success");
-            }
-        });
-});
 
 app.get('/*', function (req, res) {
     var sFile = req.originalUrl;
@@ -86,7 +36,6 @@ app.get('/*', function (req, res) {
     }
     console.log(sFile);
     
-
     res.sendFile(sFile,
         {
             maxAge: 1,    // 24* 60* 60* 1000, 
@@ -101,15 +50,26 @@ app.get('/*', function (req, res) {
                 console.log(" Success");
             }
         });
+});
 
+io.on('connection', function (socket) {
 
+    socket.on('chat message', function (msg) {
+        io.emit('chat message', msg);
+    });
 
+    socket.on('message', function (msg) {
+        console.log("someone sent:" + msg);
+        io.emit('message', msg);
+    });
 });
 
 
+http.listen(8080, function () {
+    console.log('listening on *:8080');
+});
 
 
-console.log("Hello class");
 
 
 
