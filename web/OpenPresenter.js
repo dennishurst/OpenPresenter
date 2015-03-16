@@ -1,7 +1,24 @@
 var express = require('express'); 
 var url = require('url'); 
 var app = express(); 
-app.listen(8080); 
+
+//var http = require('http').Server(app);
+//var io = require('socket.io')(http);
+
+
+//io.on('connection', function (socket) {
+//    console.log('a user connected');
+//});
+
+app.listen(8080);
+
+
+
+
+
+//var app = require('express')();
+
+
 
 app.get('/testdir/*', function (req, res) {
     console.log('howdy');
