@@ -4,6 +4,15 @@ var io = require('socket.io')(http);
 
 var url = require('url');
 
+var fs = require('fs');
+
+var sTSettings = fs.readFileSync("settings.json");
+var oSettings = JSON.parse(sTSettings);
+console.log("currentService:" + oSettings.currentService_id);
+
+
+
+
 
 app.get('/user/:userid', function (req, res) {
     console.log(" URL:\t " + req.originalUrl);

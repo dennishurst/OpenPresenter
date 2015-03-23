@@ -1,0 +1,316 @@
+<html>
+<head>
+	<title>Service Web Master </title>
+	<link type="text/css" rel="stylesheet" href="/css/superHeroTheme.css"/>
+	<link type="text/css" rel="stylesheet" href="/css/overpower.css"/>
+	<link rel="icon" href="img/serviceWeb/BugsBunny.jpg"/>
+    <script src="/js/jquery-2.1.3.min.js"></script>
+		<script src="/js/bootstrap.js"></script>
+</head>
+
+<body>
+	<div id="page" class="container">
+		<div class="alert alert-dismissible alert-warning">
+			<button type="button" class="close" data-dismiss="alert">×</button>
+			<strong>Someone signed in!</strong> It looks like <strong>Mr. Bigglesworth</strong> has just signed on as a <em>Backstage</em> viewer.
+		</div>
+		<div id="serviceLeft" class="col-md-3">
+			<div id="currentserviceTab" class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Current Service</h3>
+				</div>
+				<div class="panel-body">
+					<div class="list-group">
+						<ul class="nav nav-tabs">
+						<li class="active"><a href="#serviceScenes" data-toggle="tab">Scenes</a></li>
+						<li class=""><a href="#serviceCast" data-toggle="tab">Cast</a></li>
+					</ul>
+					<div id="myTabContent" class="tab-content">
+						<div class="tab-pane fade active in" id="serviceScenes">
+    						<a href="#" class="list-group-item">Scene 42</a>
+    						<a href="#" class="list-group-item">Lying Cake</a>
+    						<a href="#" class="list-group-item">not-a-scene</a>
+    						<a href="#" class="list-group-item">Drunken Sailors</a>
+    					</div>
+    					<div class="tab-pane fade" id="serviceCast">
+    						<a href="#" class="list-group-item">Chell</a>
+    						<a href="#" class="list-group-item">Glados</a>
+    						<a href="#" class="list-group-item">Sir Robin</a>
+    						<a href="#" class="list-group-item">The coconut</a>
+    					</div>
+    				</div>
+				</div>
+			</div>
+			</div>
+			<div id="nextServiceTab" class="panel panel-purple">
+				<div class="panel-heading">
+					<h3 class="panel-title">Next Service</h3>
+				</div>
+				<div class="panel-body">
+					<table class="table table-striped table-hover">
+						<thead>
+							<tr class="active">
+								<th>Role</th>
+								<th>Actor</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Chell</td>
+								<td>Shaniqua</td>
+							</tr>
+							<tr class="active">
+								<td>Glados</td>
+								<td>AI V.34.2.5</td>
+							</tr>
+							<tr>
+								<td>Verses</td>
+								<td>Singers</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div id="allResourcesTab" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title"> All Resources </h3>
+				</div>
+				<div class="panel-body">
+					<div class="form-group">
+						<label class="control-label" for="inputSmall">Search</label>
+						<input type="text" class="form-control input-sm" id="inputSmall">
+					</div>
+
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#all" data-toggle="tab">All</a></li>
+						<li class=""><a href="#song" data-toggle="tab">Song</a></li>
+						<li><a href="#scene" data-toggle="tab">Scene</a></li>
+					</ul>
+					<div id="myTabContent" class="tab-content">
+						<div class="tab-pane fade active in" id="all">
+    						<a href="#" class="list-group-item">Songs</a>
+    						<a href="#" class="list-group-item">Verses</a>
+    						<a href="#" class="list-group-item">And everything else</a>
+    						<a href="#" class="list-group-item">Perhaps a small cup of tea?</a>
+    					</div>
+    					<div class="tab-pane fade" id="song">
+    						<a href="#" class="list-group-item">Sound of Madness</a>
+    						<a href="#" class="list-group-item">Diary Of Jane</a>
+    						<a href="#" class="list-group-item">You're Gonna Go Far, Kid</a>
+    						<a href="#" class="list-group-item">Ballad Of Mona Lisa</a>
+    						<a href="#" class="list-group-item">Miss Jackson</a>
+    					</div>
+    					<div class="tab-pane fade" id="scene">
+    						<a href="#" class="list-group-item">Scene 42</a>
+    						<a href="#" class="list-group-item">Mouse Steals Cheese</a>
+    						<a href="#" class="list-group-item">The Scene of Sir Robin</a>
+    						<a href="#" class="list-group-item">The End</a>
+    					</div>
+    				</div>
+
+				</div>
+			</div>
+<!--below is the end of the first column -->
+		</div>
+		<div id="lines" class="col-md-6">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<h3 class="panel-title"> Lines </h3>
+				</div>
+				<div class="panel-body">
+					<ul class="pager">
+						<li><a href="#">Previous Song</a></li>
+						<li><a href="#">Previous Verse</a></li>
+						<li><a href="#">Next Verse</a></li>
+						<li><a href="#">Next Song</a></li>
+					</ul>
+
+					<table class="table table-striped table-hover">
+						<thead>
+							<tr>
+								<th>Source</th>
+								<th>Line</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Glados</td>
+								<td>It's been a long time </td>
+							</tr>
+							<tr>
+								<td>V1</td>
+								<td>This was a triumph, I'm making a note here: huge success. It's hard to overstate my satisfaction.</td>
+							</tr>
+							<tr class="text-success">
+								<td >Chell</td>
+								<td>Dramatically grips portal</td>
+							</tr>
+							<tr>
+								<td>V2</td>
+								<td>Apeture Science. We do what we must, because, we can.</td>
+							</tr>
+							<tr>
+								<td>V3</td>
+								<td>So the science gets done and you make a neat gun for the people who are still alive.</td>
+							</tr>
+							<tr>
+								<td>V4</td>
+								<td>I'm doing science and I'm still alive, you'll be dead and I'll be still alive</td>
+							</tr>
+							<tr class="text-danger">
+								<td>Scene</td>
+								<td>End</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+<!--end of lines box -->
+		</div>
+
+		<div id="screenEdit" class="col-md-3">
+			<div id="edit panel" class="panel panel-info">
+				<div class="panel-heading">
+					<h3 class="panel-title">Change Screens</h3>
+				</div>
+				<div class="panel-body">
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#serve" data-toggle="tab">Service</a></li>
+						<li class=""><a href="#sedit" data-toggle="tab">Song</a></li>
+						<li><a href="#verse" data-toggle="tab">Verse</a></li>
+					</ul>
+					<div id="myTabContent" class="tab-content">
+						<div class="tab-pane fade active in" id="serve">
+    						<div class="form-group">
+								<label class="control-label" for="focusedInput">Edit Service</label>
+								<input class="form-control" type="text" value="Edit Service here?">
+							</div>
+    					</div>
+    					<div class="tab-pane fade" id="sedit">
+    						<label class="control-label" for="focusedInput">Edit Song</label>
+								<input class="form-control" type="text" value="Edit song here?">
+    					</div>
+    					<div class="tab-pane fade" id="verse">
+    						<div class="form-group">
+								<label class="control-label" for="focusedInput">Edit Verse</label>
+								<input class="form-control" type="text" value="Edit Verse here?">
+							</div>
+    					</div>
+    				</div>
+						
+				
+				</div>
+			</div>
+<!--second panel of the right side-->
+			<div class="panel panel-warning">
+				<div class="panel-heading">
+					<h3 class="panel-title">Current Users</h3>
+				</div>
+				<div class="panel-body">
+					<table class="table table-striped table-hover">
+						<thead>
+							<tr>
+								<th>
+									Id
+								</th>
+								<th>
+									Function
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Mr. Bigglesworth</td>
+								<td>
+									<div class="form-group">
+										<label for="select1" class="control-label"> </label>
+											<select class="form-control" id="select1">
+												<option>Master</option>
+												<option>Backstage</option>
+												<option>Band</option>
+												<option>Audience</option>
+											</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>Austin Powers</td>
+								<td>
+									<div class="form-group">
+										<label for="select2" class="control-label"> </label>
+											<select class="form-control" id="select2">
+												<option>Master</option>
+												<option>Backstage</option>
+												<option>Band</option>
+												<option>Audience</option>
+											</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>Dr.Evil</td>
+								<td>
+									<div class="form-group">
+										<label for="select3" class="control-label"> </label>
+											<select class="form-control" id="select3">
+												<option>Master</option>
+												<option>Backstage</option>
+												<option>Band</option>
+												<option>Audience</option>
+											</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>Number 2</td>
+								<td>
+									<div class="form-group">
+										<label for="select3" class="control-label"> </label>
+											<select class="form-control" id="select3">
+												<option>Master</option>
+												<option>Backstage</option>
+												<option>Band</option>
+												<option>Audience</option>
+											</select>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+
+
+
+
+			</div>
+
+
+
+
+
+
+
+
+
+	<!-- This is the end of the screenEdit box -->
+		</div>
+
+
+
+		<div class="progress col-md-12">
+			<div class="progress-bar" style="width: 67%"></div>
+		</div>
+
+
+
+
+
+
+
+
+<!-- below is the end of the page container -->
+	</div>
+
+</body>
+</html>

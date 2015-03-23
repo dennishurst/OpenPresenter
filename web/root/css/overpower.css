@@ -1,0 +1,18 @@
+.panel-purple {
+  border-color: transparent;
+}
+.panel-purple > .panel-heading {
+  color: #ffffff;
+  background-color: #b16fea;
+  border-color: transparent;
+}
+.panel-purple > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: transparent;
+}
+.panel-purple > .panel-heading .badge {
+  color: #b16fea;
+  background-color: #ffffff;
+}
+.panel-purple > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: transparent;
+}
