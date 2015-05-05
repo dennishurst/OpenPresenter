@@ -6,12 +6,65 @@ var url = require('url');
 
 var fs = require('fs');
 
+var util = require('./Util.js');
+
+
 var sTSettings = fs.readFileSync("settings.json");
 var oSettings = JSON.parse(sTSettings);
 console.log("currentService:" + oSettings.currentService_id);
 
 
 
+
+app.get('/songs/*', function (req, res) {
+    var sFile = req.originalUrl;
+    sFile = sFile.substring(7, sFile.length);
+    
+    if (sFile.length === 0) {
+        sFile = util.fxGetSongs();
+        app.set('json_spaces', 4);
+        res.json(sFile);
+        return;
+    }
+    
+
+    res.sendFile(sFile,
+        {
+            maxAge: 1,    // 24* 60* 60* 1000, 
+            root: './root/songs/',
+            headers: {
+                'Content-Type': 'application/json; charset=utf-8'
+            }
+	
+        },
+        function (err) {
+            if (err) {
+                console.log("Error serving:" + sFile);
+                console.log(err);
+                res.status(err.status).end();
+            }
+            else {
+                console.log(" Success");
+            }
+        });
+});
+
+
+
+app.get('/api/*', function (req, res) {
+    var myObj = {
+        FirstName: "Dennis",
+        LastName: "Hurst",
+        "Courses":  [{"Class": "CS", "Grade":"A"}, {"Class": "English", "Grade": "C"}]
+
+    }
+
+    app.set('json_spaces', 4);
+    res.json(myObj);
+
+
+
+});
 
 
 app.get('/user/:userid', function (req, res) {
@@ -75,9 +128,21 @@ io.on('connection', function (socket) {
 
 
 http.listen(8080, function () {
-    console.log('listening on *:8080');
+    console.log('listening on http://127.0.0.1:8080');
 });
 
+
+
+
+
+    //files.map(function (file) {
+    //    return path.join(p, file);
+    //}).filter(function (file) {
+    //    return fs.statSync(file).isFile();
+    //}).forEach(function (file) {
+    //    console.log("%s (%s)", file, path.extname(file));
+    //});
+    //});
 
 
 
