@@ -22,7 +22,7 @@
 
 
                 var sLine = iLine.toString() + ":" + oScene.lines[iLine].line;
-                $("#idShowLines").html(sLine);
+                $("idShowLines").html(sLine);
             }
         });
 
@@ -84,12 +84,6 @@
         }
 
 
-        //alert(oScene.description);
-
-
-
-
-
 
     </script>
 
@@ -98,10 +92,13 @@
 </head>
 <body>
     <h1>Hi, how are you</h1>
-    <p><a onclick="fxNext(); return false;">Next</a></p>
-    <p>
-        <div id="idShowLines"></div>
-    </p>
+    <p><a href="serviceWebMaster.html">Click here to see serviceWebMaster.html</a></p>
+    <p><img src="images/BugsBunny.jpg" alt="Our new mascot"></p>
+    <p><a onclick="fxNext(); return false;"><img src="images/next.jpg" alt="Next button should be here" /></a></p>
+    <br />
+    <p>Note, clicking the next button should show the next line just below this.  If it does not then you may have a javascript bug</p>
+    <div id="idShowLines"></div>
+    
 
 
 
