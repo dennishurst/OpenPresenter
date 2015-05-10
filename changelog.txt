@@ -1,0 +1,8 @@
+1.Changed name of "Renamed_css" back to "css"
+2.Added quotes on line 16 of OpenPresenter.js
+3.Added Semicolon on line 51 of OpenPresenter.js
+4.Added an octothorpe on line 25 in index.html
+5.Moved next.jpg from root to root/images
+6.Added "." to the location of css files (ie. /css/superHeroTheme.css > ./css/superHeroTheme ) in index.html
+7?. Added Semicolon to line 84 of index.html
+8. Added "." to the location of css files (ie. /css/superHeroTheme.css > ./css/superHeroTheme ) in controller.html
