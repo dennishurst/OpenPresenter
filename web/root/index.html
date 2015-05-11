@@ -22,7 +22,10 @@
 
 
                 var sLine = iLine.toString() + ":" + oScene.lines[iLine].line;
-                $("idShowLines").html(sLine);
+                //
+                //Added pound sign to idShowLines in order for jquery to work
+                //
+                $("#idShowLines").html(sLine);
             }
         });
 

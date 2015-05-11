@@ -13,12 +13,16 @@ var sTSettings = fs.readFileSync("settings.json");
 var oSettings = JSON.parse(sTSettings);
 console.log("currentService:" + oSettings.currentService_id);
 
-console.log(Starting program, now let's load a handler.);
+//
+//Got rid of unexpected identifier right here
+//
 
 app.get('/*', function (req, res) {
     var sFile = req.originalUrl;
-    sFile = sFile.substring(2, sFile.length);
-
+    sFile = sFile.substring(1, sFile.length);
+    //
+    //changed above number from 2 to 1
+    //
     if (sFile.length === 0)
     {
         sFile = "index.html";
@@ -48,7 +52,7 @@ app.get('/api/*', function (req, res) {
         LastName: "Hurst",
         "Courses": [{ "Class": "CS", "Grade": "A" }, { "Class": "English", "Grade": "C" }]
 
-    }
+    };
 
     app.set('json_spaces', 4);
     res.json(myObj);
@@ -80,7 +84,7 @@ app.get('/user/:userid', function (req, res) {
 
 app.get('/songs/*', function (req, res) {
     var sFile = req.originalUrl;
-    sFile = sFile.substring(7, sFile.length);
+    sFile = sFile.substring(1, sFile.length);
 
     if (sFile.length === 0) {
         sFile = util.fxGetSongs();
@@ -129,15 +133,15 @@ http.listen(8080, function () {
 });
 
 
-
-
-
+//
+//Below code is supposed to be commented out
+//
     //files.map(function (file) {
-    //    return path.join(p, file);
+        //return path.join(p, file);
     //}).filter(function (file) {
-    //    return fs.statSync(file).isFile();
+        //return fs.statSync(file).isFile();
     //}).forEach(function (file) {
-    //    console.log("%s (%s)", file, path.extname(file));
+        //console.log("%s (%s)", file, path.extname(file));
     //});
     //});
 
