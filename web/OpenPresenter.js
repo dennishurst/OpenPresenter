@@ -13,12 +13,12 @@ var sTSettings = fs.readFileSync("settings.json");
 var oSettings = JSON.parse(sTSettings);
 console.log("currentService:" + oSettings.currentService_id);
 
-console.log(Starting program, now let's load a handler.);
-
+//console.log(Starting program, now let's load a handler.);
+// I made this a comment because node would not run because of this^^
 app.get('/*', function (req, res) {
     var sFile = req.originalUrl;
-    sFile = sFile.substring(2, sFile.length);
-
+    sFile = sFile.substring(1, sFile.length);
+    //I fixed this line^^
     if (sFile.length === 0)
     {
         sFile = "index.html";

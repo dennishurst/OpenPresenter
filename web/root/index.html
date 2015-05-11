@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -20,9 +19,10 @@
                     iLine++;
                 }
 
-
-                var sLine = iLine.toString() + ":" + oScene.lines[iLine].line;
-                $("idShowLines").html(sLine);
+                //I fixed line 24 and 25
+                var sLine = iLine.toString() + ":" + oScene.lines[iLine].
+                    line;
+                $("#idShowLines").html(sLine);
             }
         });
 
@@ -84,7 +84,6 @@
         }
 
 
-
     </script>
 
 
@@ -92,13 +91,20 @@
 </head>
 <body>
     <h1>Hi, how are you</h1>
-    <p><a href="serviceWebMaster.html">Click here to see serviceWebMaster.html</a></p>
-    <p><img src="images/BugsBunny.jpg" alt="Our new mascot"></p>
-    <p><a onclick="fxNext(); return false;"><img src="images/next.jpg" alt="Next button should be here" /></a></p>
+    <p>
+        <a href="serviceWebMaster.html">Click here to see serviceWebMaster.html</a>
+    </p>
+    <p>
+        <img src="images/BugsBunny.jpg" alt="Our new mascot">
+    </p>
+    <p>
+        <a onclick="fxNext(); return false;"><img src="images/next.jpg" alt="Next button should be here" /></a>
+    </p>
     <br />
-    <p>Note, clicking the next button should show the next line just below this.  If it does not then you may have a javascript bug</p>
+    <p>
+        Note, clicking the next button should show the next line just below this.  If it does not then you may have a javascript bug
+    </p>
     <div id="idShowLines"></div>
-    
 
 
 
