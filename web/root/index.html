@@ -21,8 +21,12 @@
                 }
 
 
-                var sLine = iLine.toString() + ":" + oScene.lines[iLine].line;
-                $("idShowLines").html(sLine);
+        
+            var sLine = iLine.toString() + ":" + oScene.lines[iLine].line;
+                //
+                // # was missing
+                //
+                $("#idShowLines").html(sLine);
             }
         });
 
@@ -80,7 +84,9 @@
                   "stageDirection": "[Aside]",
                   "line": "Shall I hear more, or shall I speak at this?"
               }
-            ]
+            }
+          ] 
+
         }
 
 
