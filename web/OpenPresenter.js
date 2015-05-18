@@ -13,11 +13,13 @@ var sTSettings = fs.readFileSync("settings.json");
 var oSettings = JSON.parse(sTSettings);
 console.log("currentService:" + oSettings.currentService_id);
 
-console.log(Starting program, now let's load a handler.);
+
+
 
 app.get('/*', function (req, res) {
     var sFile = req.originalUrl;
-    sFile = sFile.substring(2, sFile.length);
+    
+    sFile = sFile.substring(1, sFile.length);
 
     if (sFile.length === 0)
     {
@@ -25,14 +27,18 @@ app.get('/*', function (req, res) {
     }
     console.log(sFile);
     
+    
     res.sendFile(sFile,
         {
             maxAge: 1,    // 24* 60* 60* 1000, 
             root: './root/'
-        },
+                
+       
+            },
         function (err) {
             if (err) {
                 console.log("Error serving:" + sFile);
+                console.log(err);
                 res.status(err.status).end();
             }
             else {
@@ -42,11 +48,12 @@ app.get('/*', function (req, res) {
 });
 
 
+
 app.get('/api/*', function (req, res) {
     var myObj = {
         FirstName: "Dennis",
         LastName: "Hurst",
-        "Courses": [{ "Class": "CS", "Grade": "A" }, { "Class": "English", "Grade": "C" }]
+        "Courses": [{"Class": "CS", "Grade":"A"}, {"Class": "English", "Grade": "C"}]
 
     }
 
@@ -65,7 +72,7 @@ app.get('/user/:userid', function (req, res) {
     console.log(" Path:\t " + req.path);
     console.log(" Host:\t " + req.host);
     console.log(" Method:\t " + req.method);
-    console.log(" Query:\t " + JSON.stringify(req.query));
+    console.log(" Query:\t " + JSON.stringify( req.query));
     console.log(" Fresh:\t " + req.fresh);
     console.log(" Stale:\t " + req.stale);
     console.log(" Secure:\t " + req.secure);
@@ -78,38 +85,6 @@ app.get('/user/:userid', function (req, res) {
     res.send(sT);
 });
 
-app.get('/songs/*', function (req, res) {
-    var sFile = req.originalUrl;
-    sFile = sFile.substring(7, sFile.length);
-
-    if (sFile.length === 0) {
-        sFile = util.fxGetSongs();
-        app.set('json_spaces', 4);
-        res.json(sFile);
-        return;
-    }
-
-
-    res.sendFile(sFile,
-        {
-            maxAge: 1,    // 24* 60* 60* 1000, 
-            root: './root/songs/',
-            headers: {
-                'Content-Type': 'application/json; charset=utf-8'
-            }
-
-        },
-        function (err) {
-            if (err) {
-                console.log("Error serving:" + sFile);
-                console.log(err);
-                res.status(err.status).end();
-            }
-            else {
-                console.log(" Success");
-            }
-        });
-});
 
 io.on('connection', function (socket) {
 
